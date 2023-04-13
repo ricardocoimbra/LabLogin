@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/textEnter"
-        android:text="@string/textEnter"
+        android:text="@string/registrar"
         android:textAlignment="center"
         android:textSize="32sp"
         android:textColor="@color/black"
@@ -46,14 +46,14 @@
 
         />
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
         android:background="#FDFDFD"
-        android:hint="@string/name"
+        android:hint="@string/email"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,47 +75,35 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         android:inputType="textPassword"
         android:autofillHints="">
 
     </EditText>
 
-    <CheckBox
-        android:id="@+id/checkboxLembrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
-        android:text="@string/lembrar"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        />
+
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         app:cornerRadius="20dp"
-        android:text="@string/textLogin"
+        android:text="@string/textRegistar"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkboxLembrar"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
         />
 
     <TextView
-        android:id="@+id/registerNow"
+        android:id="@+id/loginNow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textRegistro"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:text="Ir para o login"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"

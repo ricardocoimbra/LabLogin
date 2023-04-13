@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">LabLogin</string>
     <string name="description_image_user">Image User</string>
-    <string name="name">Nome</string>
+    <string name="email">Email</string>
     <string name="password">Senha</string>
     <string name="textLogin">Login</string>
     <string name="lembrar">Lembrar</string>
     <string name="textEnter">Entrar</string>
     <string name="textInfo">Insira suas informações</string>
+    <string name="textRegistro">Ir para o Registro</string>
+    <string name="textRegistar">Registar</string>
+    <string name="registrar">Registrar</string>
 </resources>
