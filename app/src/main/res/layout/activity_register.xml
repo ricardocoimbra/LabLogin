@@ -43,8 +43,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textEnter"
-
         />
+
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -59,8 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInfo"
         android:autofillHints=""
-        android:inputType="textPersonName">
-
+        android:inputType="textEmailAddress">
     </EditText>
 
     <EditText
@@ -78,10 +77,18 @@
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         android:inputType="textPassword"
         android:autofillHints="">
-
     </EditText>
 
-
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonRegister"
@@ -95,7 +102,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@id/progressbar"
         />
 
     <TextView
@@ -111,6 +118,5 @@
         android:textStyle="bold"
         android:textSize="20sp"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
