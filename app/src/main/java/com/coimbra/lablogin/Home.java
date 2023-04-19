@@ -18,26 +18,25 @@ public class Home extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseUser user;
-    TextView textView;
+    TextView textViewGetUser;
     MaterialButton btnSair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-        textView = findViewById(R.id.getUser);
+        textViewGetUser = findViewById(R.id.getUser);
         btnSair = findViewById(R.id.logout);
 
-        if (user == null) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-            finish();
-        } else {
-            textView.setText(user.getEmail());
-        }
+//        if (user == null) {
+//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+//            finish();
+//        } else {
+//            textViewGetUser.setText(user.getEmail());
+//        }
 
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +47,5 @@ public class Home extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }
