@@ -19,7 +19,8 @@ public class Home extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
     TextView textViewGetUser;
-    MaterialButton btnSair;
+    MaterialButton btnSair, goToForm;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,20 +30,22 @@ public class Home extends AppCompatActivity {
         user = auth.getCurrentUser();
         textViewGetUser = findViewById(R.id.getUser);
         btnSair = findViewById(R.id.logout);
-
-//        if (user == null) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-//            textViewGetUser.setText(user.getEmail());
-//        }
+        goToForm = findViewById(R.id.goToForm);
 
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        goToForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), FormularioActivity.class);
                 startActivity(intent);
                 finish();
             }
