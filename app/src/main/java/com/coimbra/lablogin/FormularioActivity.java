@@ -72,7 +72,7 @@ public class FormularioActivity extends AppCompatActivity {
                 String fName = myFirstName.getText().toString();
                 String lName = myLastName.getText().toString();
 
-                MyDatabaseHelper myDB = new MyDatabaseHelper(MainActivity.class);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(FormularioActivity.this);
                 myDB.addPerson(fName.trim(), lName.trim());
             }
         });
@@ -80,8 +80,8 @@ public class FormularioActivity extends AppCompatActivity {
         myButtonDisplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(MainActivity.class);
-                Intent intent = new Intent(this, DisplayActivity.class);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(FormularioActivity.this);
+                Intent intent = new Intent(FormularioActivity.this, DisplayActivity.class);
                 startActivity(intent);
             }
         });
